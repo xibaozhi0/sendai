@@ -1,0 +1,36 @@
+.dashboard {
+  padding: 24px;
+  background: #fff;
+  min-height: 600px;
+  .dashboard-card {
+    float: right;
+  }
+  .dashboard-content { 
+    position: absolute;
+    top: 420px;
+    width: 66%;
+    border: 1px solid #e8e8e8;
+    .dashboard-menu {
+      font-size: 20px;
+      span {
+        cursor: pointer;
+      }
+      .dashboard-menu-active {
+        border-bottom: 2px solid #1DA57A;
+        color: #1DA57A;
+        padding: 0 0 16px 0;
+      }
+      .dashboard-menu-visited {
+        margin-right: 40px;
+      }
+    }
+    .dashboard-table-left {
+      float: left;
+      width: 60%;
+    }
+    .dashboard-table-right {
+      float: left;
+      width: 300px;
+    }
+  }
+}
