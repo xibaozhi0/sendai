@@ -2,9 +2,23 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Usage
 
-In the project directory, you can run:
+
+1.Clone project code.
+
+git clone  https://github.com/omaesama/sendai
+
+2.Installation dependence.
+
+yarn install
+Or
+npm install
+
+3.Start local server.
+
+npm run start
+Or
 
 ### `npm start`
 
