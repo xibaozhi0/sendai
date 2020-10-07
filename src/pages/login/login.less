@@ -1,63 +1,63 @@
 .login {
   width: 100%;
   height: 100%;
-  background-image: url('./images/bg.jpg');
-  background-size: 100% 100%;
+  background-image: url('./images/bg2.png');
+  background-size: 100% 150%;
   .login-header {
-     display: flex;
+    display: right;
+    padding: 40px 10px;
+    margin: 280 60px 260 60px;
     align-items: center;
-    height: 50px;
-    background-color: rgba(21, 20, 13, 0.5);
+    display: center;
+    height: 80px;
+    background-color:transparent;
     img {
-      width: 40px;
-      height: 40px;
-      margin: 0 35px 0 50px;
+      
+      display: center;
+      width: 60px;
+      height: 60px;
+      // margin: 280 60px 260 60px;
     }
-    h1 {
-      font-size: 20px;
-      color: white;
-    }
-   
-  } 
-
-
-  .login-content {
-    position: relative;
-    width: 300px;
-    height: 600px;
-    background-color:rgba(27, 52, 119, 0.637);
-    margin: 5px auto;
-    padding: 20px 20px;
-    .error-msg {
-      visibility: hidden;
-      position: relative;
-      top: 0;
-      left: 0;
-      text-align: center;
-      height: 10px;
-      width: 100%;
-      background: #f60c1a;
-      color: #ffffff;
-      font-size: 6px;
-      transform: translateY(-30px);
-      transition: all .3s;
-      &.show {
-        visibility: visible;
-        transform: translateY(0);
+    .register-header {
+      display: right;
+      align-items:round(3);
+      height: 80px;
+      // margin: 380 60px 60 360px;
+      background-color: rgba(5, 72, 104, 0.5);
+     
+      h1 {
+        font-size: 10px;
+        color: white;
+      }
+      h2 {
+        font-size: 20px;
+        color: white;
       }
     }
     h2 {
+      font-size: 20px;
+      color: white;
+    }
+  }
+  
+
+  .login-content {
+    width: 380px;
+    height: 300px;
+    background-color: rgba(5, 72, 104, 0.5);;
+    margin: 40px auto;
+    padding: 20px 40px;
+    h1 {
       text-align: center;
-      font-size: 10px;
+      font-size: 15px;
       font-weight:bold;
-      margin-bottom: 3px;
+      color: white;
+      margin-bottom: 10px;
     }
     .login-form {
       .login-form-button {
         width: 100%;
-
       }
-   
     }
   }
 }
