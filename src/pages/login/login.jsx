@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {Form, Icon, Input, Button, notification, message, Checkbox  } from 'antd'
+import {Form, Icon, Input, Button, notification, message, Checkbox,Space,Divider,Row, Col } from 'antd'
 import { Redirect,Link } from 'react-router-dom'
 import './login.less'
 import {connect} from 'react-redux'
@@ -11,6 +11,7 @@ const Item = Form.Item
 /**
  * ログイン　コンポーネント
  */
+
 class Login extends Component {
   async handleSubmit(event) {
     event.preventDefault()
@@ -52,18 +53,18 @@ class Login extends Component {
       return (
     
         <div   className="login">
-        <Link to="/">
-       <header className="header">
-       <img
-      src={logo}
-       alt="logo"
-     />
-       <h1>Pear</h1>
-  {/* <h1>    <span className="register"> <a href="/register">register now!</a></span> </h1> */}
-       </header>
-       </Link>
+   <Row>
+      <Link to="/" > <Col span={3} > <img src={logo} alt="logo"/></Col> </Link>
+          <Col span={3} className="login-header"><h2>Pear</h2></Col>
+          <Col span={15}></Col> 
+          <Col span={3} className="login-header" style={{ float: 'right'}}><Link to="/register" > 
+           
+             <header>register</header>
+       </Link></Col>
+     </Row>
+    
        <section className="login-content">
-         <span> <a href="/register">register now!</a></span> 
+        
             
             <Form onSubmit={this.handleSubmit.bind(this)} className="login-form">
               <Item>
@@ -101,57 +102,63 @@ class Login extends Component {
                     placeholder="暗証番号"
                   />
                 )}
-              </Form.Item>
-              <span>
-            <Form.Item>
+              {/* </Form.Item>
+           
+            <Form.Item> */}
              <Form.Item name="remember" valuePropName="checked" noStyle>
-               <Checkbox>Remember me</Checkbox>
-             </Form.Item>
-             <a className="login-form-forgot" href="">
+               <Checkbox >Remember me</Checkbox>
+           
+             <Link to="/forgetPassword" className="login-form-forgot" style={{ float: 'right'}}>
                Forgot password
-             </a>
-           </Form.Item>
-              <Form.Item>
+             </Link>
+             </Form.Item>
+           
+           {/* </Form.Item>
+              <Form.Item> */}
                 <Button
                   type="primary"
                   htmlType="submit"
                   className="login-form-button">
                   ログイン
                 </Button>
-              </Form.Item>
-              <h2>login with other</h2>
-              <span>   <Form.Item>
-              　   <Button
+                   <h1  style={{float: 'center' }}>login with other</h1>
+            
+               <Button type="primary" htmlType="submit"className="form-button">
+                  <Icon type="twitter" />
+              </Button>   
+    <Divider type="vertical" orientation="left"dashed/>
+               <Button
                   type="primary"
                   htmlType="submit"
-                  className="google-form-button">
+                  className="orm-button">
                   <Icon type="google" />
-                </Button>      
-              </Form.Item>
-              <Form.Item>
-                <Button
+              </Button>      
+              <Divider type="vertical" orientation="right" dashed/>
+              <Button
                   type="primary"
                   htmlType="submit"
-                  className="github-form-button">
+                >
+                  <Icon type="facebook" />
+              </Button> 
+              <Divider type="vertical" orientation="left"dashed/>
+              <Button
+                  type="primary"
+                  htmlType="submit"
+                >
+                  <Icon type="linkedin" />
+              </Button> 
+              <Divider type="vertical" orientation="right" dashed/>
+              <Button
+                  type="primary"
+                  htmlType="submit"
+                >
                   <Icon type="github" />
-                </Button>        　　
-              </Form.Item>
-           <Form.Item>
-                <Button
-                  type="primary"
-                  htmlType="submit"
-                  className="signInTwitter-form-button">
-                <Icon type="twitter" />
-                </Button>        　　
-              </Form.Item></span>
-             
-              </span>
-              <Form.Item>
-       
+              </Button> 
               </Form.Item>
             </Form>
           </section>
         </div>
+        
       )
     }
   }
