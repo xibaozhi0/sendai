@@ -54,18 +54,15 @@ class Login extends Component {
     
         <div   className="login">
    <Row>
-   <Link to="/" > <Col span={3} > <img src={logo} alt="logo"/></Col> </Link>
-      <Col span={3} className="login-header"><h2>Pear</h2></Col>
-      <Col span={15}></Col> 
-      <Col span={3} className="login-header" style={{ float: 'right'}}><Link to="/register" > 
-       
-         <header>register</header>
+      <Link to="/" > <Col span={3} > <img src={logo} alt="logo"/></Col> </Link>
+          <Col span={3} className="login-header"><h2>Pear</h2></Col>
+          <Col span={15}></Col> 
+          <Col span={3} className="login-header" style={{ float: 'right'}}><Link to="/register" > 
+           
+             <header>register</header>
        </Link></Col>
-    </Row>
-       {/* <header className="login-header"> */}
-
-       {/* </header>
-       */}
+     </Row>
+    
        <section className="login-content">
         
             
